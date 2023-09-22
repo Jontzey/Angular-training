@@ -1,0 +1,29 @@
+.Main-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color:  #071941;
+    height: 100vh;
+}
+
+.app-header {
+    display: flex;
+    position: sticky;
+    flex-direction: row;
+    top: -10px;
+    width: 95%;
+    z-index: 99;
+    
+}
+.app-searchbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: #126091;
+    width: 60%;
+    height: 5vh;
+    border-radius: 10px;
+    
+}

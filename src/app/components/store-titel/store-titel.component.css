@@ -1,0 +1,8 @@
+.titel{
+    margin: 0;
+    font-style: italic;
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Add a white shadow with a blur effect */
+    text-decoration:overline underline;
+}
+

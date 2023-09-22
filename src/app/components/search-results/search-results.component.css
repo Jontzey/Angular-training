@@ -1,0 +1,19 @@
+
+
+.search-container{
+    display: flex;
+    min-width: 250px;
+    max-width: 250px;
+    background-color: #177eb3;
+    align-items: center;
+    gap: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 13px rgba(255, 255, 255, 0.8);
+    
+}
+
+.search-container:hover{
+    cursor: pointer;
+    background-color: black;
+}

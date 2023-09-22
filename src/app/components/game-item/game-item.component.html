@@ -1,0 +1,10 @@
+
+<div class="cards" *ngFor="let theGame of gameList">
+
+    <h2 style="color: antiquewhite; text-align: center;">{{theGame.name}}</h2>
+    <img style="position: relative; width: 80%; min-height: 100px; max-height: 230px; overflow: hidden;" src={{theGame.image_url}} alt="">
+    <div style="display: flex; width: 70%; overflow:hidden;">
+        <h3 style="color: antiquewhite;">{{theGame.description}}</h3>
+    </div>
+    
+</div>
