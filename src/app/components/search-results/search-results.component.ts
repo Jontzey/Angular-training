@@ -1,6 +1,7 @@
 import { Component, Input, Output, OnInit, SimpleChanges } from '@angular/core';
 import { Idb } from '../../../../db';
 import {GameServiceService} from "../../services/game-service.service"
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-search-results',
   templateUrl: './search-results.component.html',
@@ -11,7 +12,6 @@ export class SearchResultsComponent implements OnInit {
    filteredGameList: Idb[] = [];
    @Input() userSearch:string = "";
 
-  
    ngOnInit(): void {
    
       this.service.getGames().subscribe((data) => {
@@ -34,10 +34,18 @@ export class SearchResultsComponent implements OnInit {
     }
      
     }
-    constructor(private service:GameServiceService) {}
+    constructor(private service:GameServiceService, private router:Router) {}
   ngOnChanges(changes: SimpleChanges): void {
    
       this.filterGames();
     
+  }
+
+  handleClick(id:any){
+    
+    this.service.getGameById(id).subscribe((game) => {
+      console.log(game);
+      this.router.navigate(['/gameObjects', id]);
+    });
   }
 }

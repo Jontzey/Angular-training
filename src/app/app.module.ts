@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './Routes/home/home.component';
 import { AboutComponent } from './Routes/about/about.component';
+import { GameIdComponent } from './Routes/game-id/game-id.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,8 @@ import { AboutComponent } from './Routes/about/about.component';
     RecommendGamesComponent,
     SearchResultsComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    GameIdComponent
   ],
   imports: [
     BrowserModule,

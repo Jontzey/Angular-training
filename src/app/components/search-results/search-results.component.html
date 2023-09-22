@@ -1,5 +1,6 @@
 
-<div *ngFor="let game of filteredGameList" class="search-container">
+<div *ngFor="let game of filteredGameList" (click)="handleClick(game.id)" class="search-container">
         <img style="width: 65px; height: 60px;" src="{{game.image_url}}" alt="">
         <h3 style="color: white;">{{game.name}}</h3>
+        <h3>{{game.id}}</h3>
 </div>
