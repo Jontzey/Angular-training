@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "angular-game-project-e08ec"
+  },
+  "targets": {
+    "angular-game-project-e08ec": {
+      "hosting": {
+        "Angular-jonte-training": [
+          "angular-game-project-e08ec"
+        ]
+      }
+    }
+  }
+}

@@ -16,6 +16,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './Routes/home/home.component';
 import { AboutComponent } from './Routes/about/about.component';
 import { GameIdComponent } from './Routes/game-id/game-id.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideDatabase,getDatabase } from '@angular/fire/database';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +39,9 @@ import { GameIdComponent } from './Routes/game-id/game-id.component';
     CommonModule,
     HttpClientModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideDatabase(() => getDatabase())
   ],
   providers: [],
   bootstrap: [AppComponent]
