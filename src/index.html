@@ -6,8 +6,56 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore-compat.js"></script>
+  <script type="module">
+
+    // Import the functions you need from the SDKs you need
+  
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
+  
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-analytics.js";
+  
+    // TODO: Add SDKs for Firebase products that you want to use
+  
+    // https://firebase.google.com/docs/web/setup#available-libraries
+    
+  
+    // Your web app's Firebase configuration
+  
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  
+    const firebaseConfig = {
+  
+      apiKey: "AIzaSyAnp_tmMevWv2bvNtt3VvaZ--twa7sxMtI",
+  
+      authDomain: "angular-game-project-e08ec.firebaseapp.com",
+  
+      projectId: "angular-game-project-e08ec",
+  
+      storageBucket: "angular-game-project-e08ec.appspot.com",
+  
+      messagingSenderId: "837473199624",
+  
+      appId: "1:837473199624:web:4dcdd42e1334c6fc78d3bd",
+  
+      measurementId: "G-XN4ZDB5SGY"
+  
+    };
+  
+  
+    // Initialize Firebase
+  
+    const app = initializeApp(firebaseConfig);
+  
+    const analytics = getAnalytics(app);
+    console.log(app);
+  </script>
+ 
 </head>
-<body>
+<body style="background-color: #071941;">
   <app-root></app-root>
+  
 </body>
 </html>
