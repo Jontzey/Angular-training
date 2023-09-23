@@ -3,12 +3,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 10px;
     
 }
 
 .searchResult{
-    position: fixed;
-    top: 165px;
+    
+    display: flex;
+    flex-direction: column;
     background-color: #126091;
     border-radius: 20px;
     

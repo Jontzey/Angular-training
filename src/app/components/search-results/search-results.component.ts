@@ -1,4 +1,4 @@
-import { Component, Input, Output, OnInit, SimpleChanges } from '@angular/core';
+import { Component, Input, Output, OnInit, SimpleChanges, OnChanges, EventEmitter } from '@angular/core';
 import { Idb } from '../../../../db';
 import {GameServiceService} from "../../services/game-service.service"
 import { Router } from '@angular/router';
@@ -11,6 +11,7 @@ export class SearchResultsComponent implements OnInit {
   GameList: Idb[] = [];
    filteredGameList: Idb[] = [];
    @Input() userSearch:string = "";
+   @Output() clearSearch: EventEmitter<void> = new EventEmitter<void>();
 
    ngOnInit(): void {
    
@@ -22,12 +23,17 @@ export class SearchResultsComponent implements OnInit {
     
   }
   
+  
   filterGames() {
-    if(this.userSearch !== ""){
+    if(this.userSearch !== "" && (this.userSearch as string) !== "all"){
       
       this.filteredGameList = this.GameList.filter(
         (g) => g["name"].toLowerCase().includes(this["userSearch"].toLowerCase())
         );
+    }
+    else if((this.userSearch as string) == 'all'){
+      this.filteredGameList = this.GameList;
+      console.log(this.filteredGameList)
     }
     else{
       this.filteredGameList = [];
@@ -38,14 +44,18 @@ export class SearchResultsComponent implements OnInit {
   ngOnChanges(changes: SimpleChanges): void {
    
       this.filterGames();
-    
+      
   }
 
   handleClick(id:any){
     
+    
     this.service.getGameById(id).subscribe((game) => {
-      console.log(game);
+      
       this.router.navigate(['/gameObjects', id]);
+      this.userSearch = "";
+      
     });
+    this.clearSearch.emit();
   }
 }

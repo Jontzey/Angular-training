@@ -1,8 +1,9 @@
 <div class="Main-container">
     <app-store-titel></app-store-titel>
     <app-header class="app-header"></app-header>
+    <app-game-searchbar></app-game-searchbar>
     <div class="game-container">
-        <img style="width: 80%; height: 400px; z-index: 0; border-radius: 20px; box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);" src={{singleGame.image_url}}>
+        <img style="width: 60%; height: 400px; z-index: 0; border-radius: 20px; box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);" src={{singleGame.image_url}} alt="img-Error">
         <div class="game-info">
             <h1 style="color: white; font-size: 2.5rem;">{{singleGame.name}}</h1>
             <div style="width: 60%; display: flex; align-items: center; flex-direction: column; gap: 20px;">

@@ -22,5 +22,7 @@ export class GameIdComponent implements OnInit {
         this.singleGame = data;
       })
     })
+    
   }
+  
 }

@@ -21,4 +21,7 @@ export class GameSearchbarComponent implements OnInit {
    OnValueChange(){
     console.log('Input value changed:', this.theSearch);
    }
+   clearSearchValue() {
+    this.theSearch = "";
+  }
 }

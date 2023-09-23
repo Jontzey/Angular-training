@@ -1,6 +1,16 @@
-<div class="searchbar-container">
-    <input type="text" placeholder="Search" [(ngModel)]="theSearch" (ngModelChange)="OnValueChange()">
+<div style="height: 100%; display: flex; flex-direction: column;">
+    <div class="searchbar-container" style="margin-bottom: 10px;">
+        <input type="text" placeholder="Search" [(ngModel)]="theSearch" (ngModelChange)="OnValueChange()">
+    </div>
+    <div style="top: 160px; right: 300px; position: absolute; z-index: 3;">
+
+        <app-search-results class="searchResult" [userSearch]="theSearch" (clearSearch)="clearSearchValue()"></app-search-results>
+    </div>
 </div>
-<app-search-results class="searchResult" [userSearch]="theSearch"></app-search-results>
+
+
+
+
+
 
 
